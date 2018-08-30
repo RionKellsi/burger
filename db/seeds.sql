@@ -1,4 +1,6 @@
-INSERT INTO burgers (name) VALUES ("Bacon Cheddar Burger");
-INSERT INTO burgers (name) VALUES ("Veggie Burger");
-INSERT INTO burgers (name) VALUES ("Mushroom Swiss Burger");
+USE burgers_db;
 
+INSERT INTO burgers (burger_name, devoured)
+VALUES ("Bacon Cheddar Burger", true), ("Mushroom Swiss Burger", true), ("Veggie Burger", true);
+
+SELECT * FROM burgers;
