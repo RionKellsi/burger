@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 // app.set("view engine", "handlebars");
 
 //TODO: make Controllers folder
-// var routes = require("./controllers/burgerController.js");
+// var routes = require("./controllers/burger_controller.js");
 
 // app.use(routes);
 
