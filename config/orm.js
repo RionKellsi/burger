@@ -11,8 +11,8 @@ var orm = {
         });
     },
     
-    insertOne: function(table, colum, burgerInput, callback){
-        var queryString = "INSERT INTO" + table + "(" + column + ") VALUES (?)";
+    insertOne: function(table, column, burgerInput, callback){
+        var queryString = 'INSERT INTO' + table + '(' + column + ') VALUES (?)';
         connection.query(queryString, [burgerInput], function(err, data){
             if (err) throw err;
             callback(data);
