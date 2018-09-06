@@ -12,8 +12,9 @@ var burger = {
             cb(res);
         });
     },
-    updateOne: function(colVal, conditionVal, cb){
-        orm.updateOne("burgers", "devoured", colVal, id, conditionVal, function(res){
+    updateOne: function(colVal, condition, cb){
+        console.log("Update Sent to ORM!")
+        orm.updateOne("burgers", "devoured", colVal, condition, function(res){
             cb(res);
         });
     }

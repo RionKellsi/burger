@@ -7,7 +7,7 @@ var PORT = process.env.PORT || 3000;
 var app = express();
 
 //TODO: make Public folder
-app.use(express.static("public"));
+app.use(express.static("./public"));
 
 app.use(bodyParser.urlencoded({ extended: true}));
 

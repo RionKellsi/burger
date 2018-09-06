@@ -5,7 +5,7 @@ var router = express.Router();
 var burger = require("../models/burger.js");
 
 router.get("/", function(req,res){
-    var info ={
+    var info = {
         brgr: []
     };
 
@@ -26,7 +26,11 @@ router.post("/create", function(req,res){
 });
 
 router.put("/update/:id", function(req, res){
-    burger.updateOne([req.body.devoured], [req.params.id], function(){
+    var condition = "id = " + req.params.id;
+    console.log("condition", condition);
+
+    burger.updateOne(req.body.devoured, condition, function(){
+        console.log("Update Sent!")
         res.redirect('/');
     })
  });

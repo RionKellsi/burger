@@ -19,9 +19,10 @@ var orm = {
         });
     },
 
-    updateOne: function(table, col, colVal, condition, conditionVal, callback){
-        var queryString = 'UPDATE' + table + 'SET' + col + '=?' + 'WHERE' + condition + '=?';
-        connection.query(queryString, [colVal, conditionVal], function(err,data){
+    updateOne: function(table, col, colVal, condition, callback){
+        var queryString = 'UPDATE' + table + 'SET' + col + '=' + colVal + 'WHERE' + condition;
+        console.log("Query String", queryString);
+        connection.query(queryString, function(err,data){
             if (err) throw err;
             callback(data);
         });
